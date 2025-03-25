@@ -17,4 +17,5 @@ include:
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: torabo_tsuki_right_central
-
+  - board: ble_micro_pro
+    shield: settings_reset
