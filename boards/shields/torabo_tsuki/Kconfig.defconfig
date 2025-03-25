@@ -1,0 +1,22 @@
+
+if SHIELD_TORABO_TSUKI_LEFT || SHIELD_TORABO_TSUKI_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "torabo-tsuki"
+
+config ZMK_SPLIT
+    default y
+
+config SPI
+    default y if ZMK_SPLIT_ROLE_CENTRAL
+
+config INPUT
+    default y if ZMK_SPLIT_ROLE_CENTRAL
+
+config ZMK_MOUSE
+    default y if ZMK_SPLIT_ROLE_CENTRAL
+
+config PMW3610
+    default y if ZMK_SPLIT_ROLE_CENTRAL
+ 
+endif
