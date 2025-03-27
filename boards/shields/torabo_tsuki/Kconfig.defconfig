@@ -7,6 +7,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
     default y
 
+config ZMK_NON_LIPO_BATTERY_MANAGEMENT
+    default y
+
 config SPI
     default y if ZMK_SPLIT_ROLE_CENTRAL
 
