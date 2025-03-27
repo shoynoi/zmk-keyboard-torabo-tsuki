@@ -5,6 +5,7 @@
     chosen {
         zmk,physical-layout = &physical_layout_l;
         zmk,kscan = &kscan0;
+        zmk,battery = &non_lipo_battery;
     };
 
     size_s_transform: keymap_transform_0 {
@@ -52,7 +53,7 @@
         data-gpios = <&bmp 12 GPIO_ACTIVE_HIGH>;
         clk-gpios = <&bmp 11 GPIO_ACTIVE_HIGH>;
         reset-gpios = <&bmp 5 GPIO_ACTIVE_HIGH>;
-        power-gpios = <&bmp 1 GPIO_ACTIVE_HIGH>, <&bmp 14 GPIO_ACTIVE_HIGH>;
+        power-gpios = <&bmp 1 GPIO_ACTIVE_HIGH>;
 
         row-gpios
             = <&bmp 19 GPIO_ACTIVE_HIGH>,
@@ -90,10 +91,12 @@
     };
 
     vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
+        // Disable default battery monitoring
+        status = "disabled";
+    };
+    non_lipo_battery: non_lipo_battery {
+        compatible = "zmk,non-lipo-battery";
         io-channels = <&adc 3>; 
-        output-ohms = <1>;
-        full-ohms = <3>;
     };
 
     physical_layout_s: physical_layout_0 {
@@ -153,6 +156,7 @@
         irq-gpios = <&gpio0 23 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         /*   optional features   */
+        power-gpios = <&bmp 14 GPIO_ACTIVE_HIGH>;
         // snipe-layers = <1>;
         // scroll-layers = <2 3>;
         automouse-layer = <1>;
