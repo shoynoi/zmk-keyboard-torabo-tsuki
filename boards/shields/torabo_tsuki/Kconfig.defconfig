@@ -11,15 +11,15 @@ config ZMK_NON_LIPO_BATTERY_MANAGEMENT
     default y
 
 config SPI
-    default y if ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 config INPUT
-    default y if ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 config ZMK_MOUSE
-    default y if ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 config PMW3610
-    default y if ZMK_SPLIT_ROLE_CENTRAL
+    default y
  
 endif
