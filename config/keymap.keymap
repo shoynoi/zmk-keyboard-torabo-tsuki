@@ -15,7 +15,7 @@
 &none  &kp Q           &kp W           &kp E                     &kp R               &kp T                              &kp Y        &kp U               &kp I             &kp O           &kp P                   &none
 &none  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D          &mt LEFT_CONTROL F  &kp G                              &kp H        &mt LEFT_CONTROL J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_GUI BACKSPACE  &none
 &none  &kp Z           &kp X           &kp C                     &kp V               &kp B        &none      &none      &kp N        &kp M               &kp COMMA         &kp DOT         &mt RIGHT_SHIFT FSLH    &none
-&none  &mkp MB1        &to 4           &kp LS(LA(LC(LG(LALT))))  &kp LANG2           &lt 1 SPACE  &kp LANG1  &lt 1 TAB  &lt 2 ENTER  &none               &none             &none           &kp ESCAPE              &none
+&none  &mkp MB1        &to 4           &kp LS(LA(LC(LG(LALT))))  &kp LANG2           &lt 1 SPACE  &kp LANG1  &lt 3 TAB  &lt 2 ENTER  &none               &none             &none           &kp ESCAPE              &none
             >;
         };
 
